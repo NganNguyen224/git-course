@@ -1,0 +1,37 @@
+1. Giải thích câu lệnh
+git init: Khởi tạo thư mục được quản lý bởi Git.
+git add <file_name>: Thêm 1 file vào vùng staging.
+git add . : Thêm toàn bộ files vào vùng staging.
+git commit -m "message": Commit code vào vùng Staging Area
+
+2. Liệt kê các file theo từng vùng
+a. Tạo 3 file: file1, file2, file3 
+- Working Directory: file1, file2, file3 
+- Staging Area: chưa có gì
+- Repository: chưa có gì 
+
+b. Chạy lệnh: git init => khởi tạo 1 kho lưu trữ mới trong folder lesson-2
+- Working Directory: file1, file2, file3
+- Staging Area: chưa có gì 
+- Repository: chưa có gì 
+
+c. Chạy lệnh: git commit -m "init project" => commit thay đổi từ Staging Area
+ vào Repository. Tuy nhiên, Staging Area trống nên không có tác dụng đáng kể.
+- Working Directory: file1, file2, file3
+- Staging Area: chưa có gì 
+- Repository: có commit đầu tiên là "init project" nhưng không chứa file nào.
+
+d. Chạy lệnh: git add file1 => thêm file1 vào Staging Area
+- Working Directory: file1, file2, file3
+- Staging Area: file1
+- Repository: commit đầu tiên là "init project" (không chứa file)
+
+e. Chạy lệnh: git commit -m "add file1" => commit file1 từ Staging Area vào Repository.
+- Working Directory: file1, file2, file3
+- Staging Area: trống
+- Repository: commit đầu tiên là "init project" và file1
+
+f. Chạy lệnh: git commit -m "add file" => lệnh này lỗi vì không có file nào trong Staging Area để commit.
+- Working Directory: file1, file2, file3
+- Staging Area: trống
+- Repository: commit đầu tiên là "init project" và file1
