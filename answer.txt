@@ -1,0 +1,11 @@
+1. Config email 
+git config --global user.email "ngannt224@gmail.com"
+git config user.name "ngannt224@gmail.com"
+
+
+2. Config name for all
+git config --global user.name "PW-ngannguyen"
+git config user.name "PW-ngannguyen"
+ 
+3. Setup your name to "PW - <tên của bạn>"
+git config user.name "PW - ngannguyen"
