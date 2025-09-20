@@ -1,0 +1,81 @@
+1. Giải thích câu lệnh
+git commit --amend: dùng để sửa đổi commit gần nhất mà không tạo một commit mới.
+git commit --amend -m "message": thay đổi nội dung message đã commit sai.
+git restore --staged <file>: restore 1 file cụ thể từ vùng Staging về vùng Working Directory.
+git reset HEAD~1: restore 1 commit gần nhất từ vùng File repository về vùng Working Directory.
+
+2. Liệt kê các file theo từng vùng trong folder lesson-3
+a. Tạo 3 file: file1, file2, file3 
+- Working Directory: file1, file2, file3 
+- Staging Area: chưa có gì
+- Repository: chưa có gì 
+
+b. Chạy lệnh: git init => khởi tạo 1 kho lưu trữ mới trong folder lesson-3
+- Working Directory: file1, file2, file3 
+- Staging Area: chưa có gì
+- Repository: chưa có gì 
+
+c. Chạy lệnh: git commit -m "init project" => commit thay đổi từ Staging Area đến Repository. 
+Tuy nhiên, Staging Area trống nên không có tác dụng đáng kể.
+- Working Directory: file1, file2, file3 
+- Staging Area: chưa có gì
+- Repository: có commit đầu tiên với message "init project" nhưng không chứa file nào.
+
+d. Chạy lệnh: git add file1 => thêm file1 vào Staging Area
+- Working Directory: file1, file2, file3 
+- Staging Area: file1
+- Repository: commit đầu tiên là "init project" (không chứa file)
+
+e. Chạy lệnh: git commit -m "add file" => commit file1 với nội dung message là "add file" từ Staging Area đến Repository
+- Working Directory: file1, file2, file3 
+- Staging Area: trống
+- Repository: commit đầu tiên là "init project" và file1 với message "add file"
+
+f. Chạy lệnh: git add . => thêm tất cả các file2, file 3 còn lại vào Staging Area
+- Working Directory: file1, file2, file3 
+- Staging Area: file 2, file3
+- Repository: commit đầu tiên là "init project" và file1 với message "add file"
+
+g. Chạy lệnh: git restore --staged file2 => restore file2 từ Staging Area về Working Directory
+- Working Directory: file1, file2, file3 
+- Staging Area: file3
+- Repository: commit đầu tiên là "init project" và file1 với message "add file"
+
+h. Chạy lệnh: git commit -m "add all files" => commit tất cả các file từ Staging Area với nội dung message là "add all files"  đến Repository
+- Working Directory: file1, file2, file3 
+- Staging Area: trống
+- Repository: commit đầu tiên là "init project", file1 với message "add file", file3 với message "add all files"
+
+i. Chạy lệnh: git reset HEAD~1 => restore commit gần nhất, chuyển file3 từ vùng File repository về vùng Working Directory
+- Working Directory: file1, file2, file3 
+- Staging Area: trống
+- Repository: commit đầu tiên là "init project" và file1 với message "add file"
+
+3. Liệt kê các file theo từng vùng trong folder lesson-3-git 
+a. Chạy lệnh git init=> khởi tạo 1 kho lưu trữ mới trong folder lesson-3-git
+- Working Directory: chưa có gì
+- Staging Area: chưa có gì
+- Repository: chưa có gì 
+
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+- Working Directory: file1.txt, file2.txt, oops/file3.txt
+- Staging Area: chưa có gì
+- Repository: chưa có gì 
+
+c. Thêm file .gitignore, thêm vào 2 dòng: => bỏ qua file1.txt và thư mục oops chứa file3.txt
+    i. file1.txt
+    ii. oops/
+- Working Directory: file1.txt, file2.txt, oops/file3.txt
+- Staging Area: chưa có gì
+- Repository: chưa có gì     
+
+d. Chạy lệnh: git add . => thêm tất cả các files từ Working Directory vào Staging Area. 
+Trường hợp này chỉ có file2.txt được thêm vì các files còn lại đã cho vào .gitignore
+- Working Directory: file1.txt, file2.txt, oops/file3.txt 
+- Staging Area: file2.txt
+- Repository: chưa có gì 
+
+e. Chạy lệnh: git commit -m"init project"=> commit tất cả các file từ Staging Area với nội dung message là "init project"  đến Repository
+- Working Directory: file1.txt, file2.txt, oops/file3.txt
+- Staging Area: Trống
+- Repository: file2.txt với commit message là "init project"
