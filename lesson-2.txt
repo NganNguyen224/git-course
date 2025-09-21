@@ -15,23 +15,22 @@ b. Chạy lệnh: git init => khởi tạo 1 kho lưu trữ mới trong folder l
 - Staging Area: chưa có gì 
 - Repository: chưa có gì 
 
-c. Chạy lệnh: git commit -m "init project" => commit thay đổi từ Staging Area
- vào Repository. Tuy nhiên, Staging Area trống nên không có tác dụng đáng kể.
+c. Chạy lệnh: git commit -m "init project" => lỗi do Staging Area trống 
 - Working Directory: file1, file2, file3
 - Staging Area: chưa có gì 
-- Repository: có commit đầu tiên là "init project" nhưng không chứa file nào.
+- Repository: chưa có gì
 
 d. Chạy lệnh: git add file1 => thêm file1 vào Staging Area
 - Working Directory: file1, file2, file3
 - Staging Area: file1
-- Repository: commit đầu tiên là "init project" (không chứa file)
+- Repository: chưa có gì
 
 e. Chạy lệnh: git commit -m "add file1" => commit file1 từ Staging Area vào Repository.
 - Working Directory: file1, file2, file3
 - Staging Area: trống
-- Repository: commit đầu tiên là "init project" và file1
+- Repository: file1 với commit meassage "add file1" 
 
 f. Chạy lệnh: git commit -m "add file" => lệnh này lỗi vì không có file nào trong Staging Area để commit.
 - Working Directory: file1, file2, file3
 - Staging Area: trống
-- Repository: commit đầu tiên là "init project" và file1
+- Repository: file1
