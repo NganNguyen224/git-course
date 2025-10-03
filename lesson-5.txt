@@ -1,0 +1,46 @@
+1. Cấu trúc DOM cơ bản của một trang web bao gồm các thẻ gì?
+Cấu trúc DOM cơ bản của một trang web thường được biểu diễn dưới dạng một cây cấu trúc (tree structure) và bao gồm các thẻ (elements) chính sau:
+
+a. Thẻ gốc (Root Element)
+<html>: Đây là thẻ gốc của toàn bộ tài liệu HTML. 
+
+b. Phần đầu trang (Head Section)
+<head>: Phần này chứa các thông tin meta về tài liệu (dữ liệu mô tả dữ liệu) mà trình duyệt và công cụ tìm kiếm sử dụng. Nội dung bên trong thẻ này không được hiển thị trực tiếp trên trang web cho người dùng.
+
+Các thẻ phổ biến bên trong <head>:
+
+- <title>: Đặt tiêu đề cho trang web, hiển thị trên thanh tiêu đề hoặc tab của trình duyệt.
+
+- <meta>: Cung cấp siêu dữ liệu (metadata) như bộ ký tự (charset), mô tả trang (description), từ khóa (keywords), và cấu hình khung nhìn (viewport).
+
+- <link>: Thường dùng để liên kết đến các tệp CSS bên ngoài (stylesheet).
+
+- <style>: Chứa các quy tắc CSS nội tuyến.
+
+- <script>: Thường được dùng để nhúng hoặc liên kết đến các tệp JavaScript, mặc dù đôi khi cũng được đặt ở cuối <body> để tối ưu hóa tốc độ tải trang.
+
+c. Phần thân trang (Body Section)
+<body>: Phần này chứa toàn bộ nội dung có thể nhìn thấy của trang web, bao gồm văn bản, hình ảnh, liên kết, bảng, và các thành phần đa phương tiện.
+
+Các thẻ phổ biến bên trong <body>:
+
+- Heading elements (<h1> đến <h6>): Dùng để xác định các tiêu đề và tiêu đề phụ với các cấp độ quan trọng khác nhau.
+
+- Paragraph element (<p>): Chứa các đoạn văn bản.
+
+- Anchor element (<a>): Tạo các siêu liên kết (hyperlink) để điều hướng.
+
+- Image element (<img>): Nhúng hình ảnh vào trang.
+
+- List elements (<ul>, <ol>, <li>): Tạo danh sách không thứ tự (un-ordered list) và có thứ tự (ordered list).
+
+- Container elements (<div>, <span>): Được sử dụng để nhóm và tạo cấu trúc cho nội dung, thường đi kèm với CSS và JavaScript.
+
+2. Hãy mô tả cấu trúc html của 1 bảng
+- <table>: Thẻ bao quanh bảng
+- <thead>: Phần tiêu đề bảng - Thẻ này chứa nội dung tiêu đề cột, thường bao gồm các thẻ <tr> và <th> bên trong.
+- <tbody>: Phần nội dung bảng - Thẻ này chứa dữ liệu chính của bảng, được tổ chức thành các hàng (row) với các ô dữ liệu (data cell).
+- <tfoot>: Phân chân bảng - Thường chứa các tóm tắt, tổng cộng hoặc ghi chú liên quan đến dữ liệu bảng.
+- <tr>: Hàng - Mọi dữ liệu hoặc tiêu đề trong bảng phải nằm bên trong một thẻ <tr>.
+- <th>: Ô tiêu đề - Các ô này thường nằm trong <thead> để đặt tên cột, nhưng cũng có thể nằm trong <tbody> để đặt tên hàng. 
+- <td>: Ô dữ liệu - Đây là nơi chứa nội dung thực tế của bảng.
